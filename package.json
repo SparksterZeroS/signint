@@ -3,12 +3,23 @@
   "version": "1.0.0",
   "description": "A set of utility functions for exchanging the signness of integers.",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:prod": "rollup -c rollup.config.js --environment BUILD:production",
+    "build:dev": "rollup -c rollup.config.js --environment BUILD:development",
+    "watch:dev": "rollup -w rollup.config.js"
   },
   "keywords": [
     "utility"
   ],
   "author": "Anthony I. Jackson Jr.",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^29.0.0",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^12.3.0",
+    "rollup": "^4.57.1",
+    "tslib": "^2.8.1",
+    "typescript": "^5.9.3"
+  }
 }
