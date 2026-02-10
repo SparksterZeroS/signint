@@ -1,0 +1,14 @@
+{
+  "name": "intcon",
+  "version": "1.0.0",
+  "description": "A set of utility functions for exchanging the signness of integers.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "utility"
+  ],
+  "author": "Anthony I. Jackson Jr.",
+  "license": "MIT"
+}
