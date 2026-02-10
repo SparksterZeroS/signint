@@ -1,5 +1,5 @@
 {
-  "name": "intcon",
+  "name": "signint",
   "version": "1.0.0",
   "description": "A set of utility functions for exchanging the signness of integers.",
   "main": "index.js",
