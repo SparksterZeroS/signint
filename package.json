@@ -5,9 +5,9 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "build:prod": "rollup -c rollup.config.js --environment BUILD:production",
-    "build:dev": "rollup -c rollup.config.js --environment BUILD:development",
-    "watch:dev": "rollup -w rollup.config.js"
+    "build": "rollup -c rollup.config.js",
+    "watch": "rollup -w rollup.config.js",
+    "types": "tsc --declaration --emitDeclarationOnly --outFile dist/signint.d.ts"
   },
   "keywords": [
     "utility"

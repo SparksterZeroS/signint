@@ -2,13 +2,19 @@ import terser from "@rollup/plugin-terser";
 import typescript from "@rollup/plugin-typescript";
 
 import * as Path from "node:path";
+import * as Filesystem from "node:fs";
 import * as URL from "node:url";
 
 const projectDirectory = Path.dirname(URL.fileURLToPath(import.meta.url));
 const srcDir = Path.join(projectDirectory, "src");
 const distDir = Path.join(projectDirectory, "dist");
 
-const projectName = "signint";
+const pkg = JSON.parse(Filesystem.readFileSync(Path.join(projectDirectory, "package.json"), "utf-8"));
+
+console.log(pkg)
+
+const projectName = pkg.name;
+
 
 /** @type {import("rollup").RollupOptions[]} */
 export default [
@@ -38,14 +44,4 @@ export default [
         ],
         plugins: [typescript()],
     },
-    {
-        input: Path.join(srcDir, "index.ts"),
-        plugins: [
-            typescript({
-                declaration: true,
-                outDir: "dist"
-            })
-            
-        ]
-    }
 ];
