@@ -1,7 +1,0 @@
-{
-    "compilerOptions": {
-        "outFile": "_"
-    },
-    "extends": "./tsconfig.json",
-    "$schema": "https://www.schemastore.org/tsconfig"
-}

@@ -7,9 +7,8 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "clean": "rimraf dist && rimraf types",
-    "build:dev": "tsc --build . tsconfig.dev.json",
-    "build:prod": "tsc --build . tsconfig.prod.json",
-    "watch": "tsc --watch --project tsconfig.json",
+    "build": "rollup -c",
+    "watch": "rollup -w",
     "types": "tsc --declaration --emitDeclarationOnly --outFile dist/signint.d.ts"
   },
   "keywords": [
@@ -18,8 +17,12 @@
   "author": "Anthony I. Jackson Jr.",
   "license": "MIT",
   "devDependencies": {
+    "@babel/core": "^7.29.0",
+    "@babel/preset-typescript": "^7.28.5",
+    "@rollup/plugin-babel": "^6.1.0",
+    "@rollup/plugin-terser": "^0.4.4",
     "rimraf": "^6.1.2",
-    "terser": "^5.46.0",
-    "typescript": "^5.9.3"
+    "rollup": "^4.57.1",
+    "terser": "^5.46.0"
   }
 }
