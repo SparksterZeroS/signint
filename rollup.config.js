@@ -18,11 +18,13 @@ export default {
     input: Path.join(srcDir, "index.ts"),
     output: [
         {
+            name: projectName,
             file: Path.join(distDir, `${projectName}.js`),
             format: "umd",
             sourcemap: true,
         },
         {
+            name: projectName,
             file: Path.join(distDir, `${projectName}.min.js`),
             format: "umd",
             plugins: [terser()]

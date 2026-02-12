@@ -3,13 +3,14 @@
   "version": "1.0.1",
   "description": "A set of utility functions for exchanging the signness of integers.",
   "type": "module",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/signint.js",
+  "types": "dist/signint.d.ts",
   "scripts": {
     "clean": "rimraf dist && rimraf types",
     "build": "rollup -c",
     "watch": "rollup -w",
-    "types": "tsc --declaration --emitDeclarationOnly --outFile dist/signint.d.ts"
+    "types": "tsc --declaration --emitDeclarationOnly --outFile dist/signint.d.ts",
+    "package": "npm run clean && npm run build && npm run types"
   },
   "keywords": [
     "utility"
