@@ -1,0 +1,6 @@
+{
+    "presets": [
+        "@babel/preset-typescript"
+    ],
+    "$schema": "http://json.schemastore.org/babelrc"
+}

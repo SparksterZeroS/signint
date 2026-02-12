@@ -1,5 +1,6 @@
 import terser from "@rollup/plugin-terser";
 import typescript from "@rollup/plugin-typescript";
+import { babel } from '@rollup/plugin-babel';
 
 import * as Path from "node:path";
 import * as Filesystem from "node:fs";
@@ -14,7 +15,6 @@ const pkg = JSON.parse(Filesystem.readFileSync(Path.join(projectDirectory, "pack
 console.log(pkg)
 
 const projectName = pkg.name;
-
 
 /** @type {import("rollup").RollupOptions[]} */
 export default [
@@ -33,15 +33,19 @@ export default [
             },
             {
                 file: Path.join(distDir, `${projectName}.js`),
-                format: "esm",
+                format: "umd",
                 sourcemap: true,
             },
             {
                 file: Path.join(distDir, `${projectName}.min.js`),
-                format: "esm",
+                format: "umd",
                 plugins: [terser()],
             },
         ],
-        plugins: [typescript()],
+        plugins: [babel(
+        {
+            extensions: [".ts"]
+        }
+        )],
     },
 ];
