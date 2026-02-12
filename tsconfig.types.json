@@ -1,0 +1,11 @@
+{
+    "declaration": true,
+    "declarationMap": true,
+    "compilerOptions": {
+        "emitDeclarationOnly": true
+    },
+    "extends": [
+        "tsconfig.json"
+    ],
+    "$schema": "https://www.schemastore.org/tsconfig"
+}
