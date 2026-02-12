@@ -2,11 +2,11 @@
   "name": "signint",
   "version": "1.0.0",
   "description": "A set of utility functions for exchanging the signness of integers.",
-  "main": "index.js",
   "type": "module",
+  "main": "index.js",
   "scripts": {
-    "build": "rollup -c rollup.config.js",
-    "watch": "rollup -w rollup.config.js",
+    "build": "tsc --project tsconfig.json --build",
+    "watch": "tsc --project tsconfig.json --watch",
     "types": "tsc --declaration --emitDeclarationOnly --outFile dist/signint.d.ts"
   },
   "keywords": [
@@ -15,11 +15,11 @@
   "author": "Anthony I. Jackson Jr.",
   "license": "MIT",
   "devDependencies": {
+    "@babel/preset-typescript": "^7.28.5",
     "@rollup/plugin-babel": "^6.1.0",
     "@rollup/plugin-commonjs": "^29.0.0",
     "@rollup/plugin-terser": "^0.4.4",
     "rollup": "^4.57.1",
-    "typescript": "^5.9.3",
-    "@babel/preset-typescript": "^7.28.5"
+    "typescript": "^5.9.3"
   }
 }
