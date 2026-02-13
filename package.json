@@ -1,16 +1,17 @@
 {
-  "name": "signint",
-  "version": "1.0.1",
+  "name": "@sparkster/signint",
+  "libraryName": "SignInt",
+  "fileName": "signint",
+  "version": "1.0.2",
   "description": "A set of utility functions for exchanging the signness of integers.",
   "type": "module",
   "main": "dist/signint.js",
-  "types": "dist/signint.d.ts",
+  "types": "types/signint.d.ts",
   "scripts": {
-    "clean": "rimraf dist && rimraf types",
+    "clean": "rimraf dist",
     "build": "rollup -c",
     "watch": "rollup -w",
-    "types": "tsc --declaration --emitDeclarationOnly --outFile dist/signint.d.ts",
-    "package": "npm run clean && npm run build && npm run types"
+    "package": "npm run clean && npm run build"
   },
   "keywords": [
     "utility"
@@ -24,6 +25,7 @@
     "@rollup/plugin-terser": "^0.4.4",
     "rimraf": "^6.1.2",
     "rollup": "^4.57.1",
-    "terser": "^5.46.0"
+    "rollup-plugin-dts": "^6.3.0",
+    "typescript": "^5.9.3"
   }
 }
