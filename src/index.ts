@@ -1,4 +1,4 @@
-/**
+    /**
  * The minimum value an unsigned byte can be.
  * @type {number}
  */

@@ -4,8 +4,30 @@
 
 ## Usage
 
-To use signint, it's as simple as using:
+To use signint, simply include it in your project using the following techniques...
+
+For browsers (iife):
 
 ```js
-import * as signint from "signint";
+// W.I.P
+```
+
+For ESModules (mjs):
+
+```js
+import * as SignInt from "signint";
+```
+
+For CommonJS (cjs):
+
+```js
+const SignInt = require("signint");
+```
+
+### Example
+
+```js
+import "signint";
+
+const unsigned
 ```

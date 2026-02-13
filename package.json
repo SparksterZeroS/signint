@@ -1,17 +1,16 @@
 {
   "name": "signint",
-  "libraryName": "SignInt",
-  "fileName": "signint",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A set of utility functions for exchanging the signness of integers.",
   "type": "module",
-  "main": "dist/signint.js",
-  "types": "types/signint.d.ts",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/signint.d.ts",
   "scripts": {
     "clean": "rimraf dist",
-    "build": "rollup -c",
+    "build": "npm run clean && rollup -c",
     "watch": "rollup -w",
-    "package": "npm run clean && npm run build"
+    "package": "npm run build"
   },
   "keywords": [
     "utility"
